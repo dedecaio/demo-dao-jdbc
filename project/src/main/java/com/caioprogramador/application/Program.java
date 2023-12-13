@@ -2,7 +2,10 @@ package com.caioprogramador.application;
 
 import com.caioprogramador.model.dao.DaoFactory;
 import com.caioprogramador.model.dao.SellerDao;
+import com.caioprogramador.model.entities.Department;
 import com.caioprogramador.model.entities.Seller;
+
+import java.util.List;
 
 
 public class Program {
@@ -14,6 +17,12 @@ public class Program {
         Seller seller = sellerDao.findById(3);
 
         System.out.println(seller);
+
+        System.out.println("\n=== TEST 2: seller findByDepartment ===");
+        Department department = new Department(2,null);
+        List<Seller> list = sellerDao.findByDepartment(department);
+
+        list.forEach(System.out::println);
 
 
     }
