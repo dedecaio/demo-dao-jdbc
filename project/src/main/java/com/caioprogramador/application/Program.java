@@ -5,6 +5,7 @@ import com.caioprogramador.model.dao.SellerDao;
 import com.caioprogramador.model.entities.Department;
 import com.caioprogramador.model.entities.Seller;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -28,6 +29,12 @@ public class Program {
 
         sellerList.forEach(System.out::println);
 
+        System.out.println("\n=== TEST r4 seller insert ===");
+
+        Seller newSeller = new Seller(null, "Greg","greg@gmail.com", new Date(), 4000.0, department);
+
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New id = " + newSeller.getId());
 
     }
 }
