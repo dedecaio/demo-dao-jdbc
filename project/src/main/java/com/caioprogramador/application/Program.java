@@ -1,6 +1,7 @@
 package com.caioprogramador.application;
 
 import com.caioprogramador.model.dao.DaoFactory;
+import com.caioprogramador.model.dao.DepartmentDao;
 import com.caioprogramador.model.dao.SellerDao;
 import com.caioprogramador.model.entities.Department;
 import com.caioprogramador.model.entities.Seller;
